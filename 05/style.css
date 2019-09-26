@@ -1,3 +1,31 @@
 article {
-    background:  #0000;;
+    display: grid;
+    grid-template-areas: "head" "main" "sources";
+    grid-template-rows: 1fr 10fr 2fr;
+}
+
+header{
+    background: lightgray;
+    grid-area: head;
+}
+
+section.main, section.sources {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+section.main{
+    grid-area: main;
+}
+
+section.sources{
+    border: 3px solid darkgrey;
+    border-radius: 5px;
+    grid-area: sources;
+}
+
+section.main img{
+    float: left;
+    min-width: 100px;
+    max-width: 300px;
 }
